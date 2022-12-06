@@ -6,7 +6,7 @@ docker compose build
 docker compose up -d
 
 docker compose ps
-docker compose logs web --follow
+docker compose logs --follow
 
 docker kill $(docker ps -q)
 docker rm $(docker ps -a -q)

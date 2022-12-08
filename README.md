@@ -31,6 +31,7 @@ The `POST` endpoint returns a `400` error when attempting to create a duplicate 
 
 ## Frontend
 ```
+cd frontend
 npm install
 npm run dev
 ```

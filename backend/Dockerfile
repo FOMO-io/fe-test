@@ -12,7 +12,7 @@ RUN addgroup app && useradd app -g app
 WORKDIR $APP_HOME
 
 # Copy .env file
-COPY dev.env $APP_HOME/.env
+COPY .env $APP_HOME/.env
 
 # Copy and install requirements.txt
 COPY ./requirements.txt $APP_HOME/requirements.txt

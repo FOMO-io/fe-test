@@ -11,7 +11,7 @@ dotenv_file = os.path.join(BASE_DIR, ".env")
 dotenv.load_dotenv(dotenv_file)
 
 SECRET_KEY = os.environ["SECRET_KEY"]
-DEBUG = os.environ["DEBUG"].lower() == "true"
+DEBUG = True
 ALLOWED_HOSTS = ["*"]
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -64,13 +64,9 @@ WSGI_APPLICATION = "core.wsgi.application"
 
 # Database
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ["POSTGRES_DB"],
-        "USER": os.environ["POSTGRES_USER"],
-        "PASSWORD": os.environ["POSTGRES_PASSWORD"],
-        "HOST": os.environ["POSTGRES_HOST"],
-        "PORT": os.environ["POSTGRES_PORT"],
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'database',
     }
 }
 

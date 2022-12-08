@@ -4,6 +4,7 @@
 .pytest_cache
 __pycache__
 celerybeat-schedule
+database
 /static
 /media
 # Frontend

@@ -1,4 +1,4 @@
-# Using Django Rest Framework to write Rest API endpoints
+from django.core.management import call_command
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -32,3 +32,11 @@ class DanceClassCreateListAPIView(APIView):
 
         detail = result.unwrap()
         return Response(detail, status=status.HTTP_200_OK)
+
+
+class LoadDevDataAPIView(APIView):
+    def get(self, request, *args, **kwargs):
+        call_command("flush", interactive=False)
+        call_command("load_dev_data")
+        detail = "Database is reset"
+        return Response({"detail": detail}, status=status.HTTP_200_OK)

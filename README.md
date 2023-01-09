@@ -15,7 +15,7 @@ The `POST` endpoint returns a `400` error when attempting to create a duplicate 
 ```
 
 ```
-https://fomo-test.herokuapp.com/api/load-dev-data (GET)
+https://fomo-test.herokuapp.com/load-dev-data (GET)
 
 This endpoint is used to clear the database and load dev data
 ```
